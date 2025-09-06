@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biro Jasa Paspor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Custom styles for hero background, fade-in animation, etc. */
+    .hero-bg {
+      background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b1749ff2-c9a1-4332-8399-6b055375ca1b.png');
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      filter: brightness(0.7) blur(2px);
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Gold accent for premium look */
+    .accent-gold {
+      color: #D4AF37; /* Gold color */
+    }
+    /* Subtle gold border for cards */
+    .card-border-gold {
+      border: 1px solid #D4AF37;
+    }
+    /* Custom hover effects */
+    .hover-gold {
+      transition: all 0.3s ease;
+    }
+    .hover-gold:hover {
+      background-color: #D4AF37;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header / Navigation -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
+      <a href="#home" class="flex items-center gap-2 text-blue-900 font-semibold text-xl accent-gold select-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m-6 3h12a2 2 0 002-2v-8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+        Biro Jasa Paspor
+      </a>
+      <ul class="hidden md:flex space-x-8 text-blue-700 font-medium">
+        <li><a href="#home" class="hover:text-blue-900 transition">Home</a></li>
+        <li><a href="#layanan" class="hover:text-blue-900 transition">Layanan</a></li>
+        <li><a href="#area" class="hover:text-blue-900 transition">Area Layanan</a></li>
+        <li><a href="#kontak" class="hover:text-blue-900 transition">Kontak</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="menu-btn" aria-label="Toggle menu" class="md:hidden text-blue-900 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-md">
+      <ul class="flex flex-col space-y-4 p-6 text-blue-700 font-medium">
+        <li><a href="#home" class="block hover:text-blue-900 transition">Home</a></li>
+        <li><a href="#layanan" class="block hover:text-blue-900 transition">Layanan</a></li>
+        <li><a href="#area" class="block hover:text-blue-900 transition">Area Layanan</a></li>
+        <li><a href="#kontak" class="block hover:text-blue-900 transition">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center text-center px-6 md:px-12 overflow-hidden">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto fade-in">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">Biro Jasa Paspor</h1>
+      <p class="mt-4 text-lg md:text-xl font-light text-white drop-shadow-md max-w-2xl mx-auto">
+        Melayani kebutuhan paspor Anda dengan cepat, mudah, dan terpercaya
+      </p>
+      <a
+        href="https://wa.me/6281327465354"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center mt-8 px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-800 hover:to-blue-600 transition rounded-full font-semibold shadow-lg text-white text-lg drop-shadow-md"
+      >
+        Hubungi saya
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.52 3.48a11.94 11.94 0 00-17 0 11.94 11.94 0 000 17l-1.5 5.5 5.5-1.5a11.94 11.94 0 0017-17zm-8.52 14.52a7.5 7.5 0 01-4.5-1.5l-.3-.2-2.7.75.75-2.7-.2-.3a7.5 7.5 0 0111.7-9.3 7.5 7.5 0 01-4.95 12.95z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Layanan Section -->
+  <section id="layanan" class="container mx-auto px-6 md:px-12 py-16">
+    <h2 class="text-3xl md:text-4xl font-semibold text-blue-900 accent-gold text-center mb-12 fade-in">Layanan saya</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="service-card fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover-gold transition cursor-pointer">
+        <div class="text-blue-700 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m-6 3h12a2 2 0 002-2v-8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center text-blue-900">Paspor Baru</h3>
+      </div>
+
+      <div class="service-card fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover-gold transition cursor-pointer">
+        <div class="text-blue-700 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center text-blue-900">Memperpanjang Paspor</h3>
+      </div>
+
+      <div class="service-card fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover-gold transition cursor-pointer">
+        <div class="text-blue-700 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.36m0 0a2.5 2.5 0 113.5-3.5 2.5 2.5 0 01-3.5 3.5z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center text-blue-900">Paspor Hilang</h3>
+      </div>
+
+      <div class="service-card fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover-gold transition cursor-pointer">
+        <div class="text-blue-700 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.369 16.5c-.77.833.192 2.5 1.731 2.5z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center text-blue-900">Paspor Rusak</h3>
+      </div>
+
+      <div class="service-card fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover-gold transition cursor-pointer">
+        <div class="text-blue-700 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center text-blue-900">Rubah/Penghapusan Data</h3>
+      </div>
+
+      <div class="service-card fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover-gold transition cursor-pointer">
+        <div class="text-blue-700 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v1H3V4zM4 6h16l-1 11a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center text-blue-900">Paspor Umroh & Haji</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Area Layanan Section -->
+  <section id="area" class="bg-blue-50 py-16">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl md:text-4xl font-semibold text-blue-900 accent-gold text-center mb-12 fade-in">Area Layanan</h2>
+      <div class="flex flex-col sm:flex-row justify-center gap-8 max-w-5xl mx-auto">
+        <div class="area-card fade-in flex items-center gap-4 bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-lg hover-gold transition cursor-pointer flex-1">
+          <div class="text-blue-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12.414a2 2 0 10-2.828 2.828l4.243 4.243a8 8 0 1111.314-11.314 8 8 0 01-11.314 11.314z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span class="text-lg font-semibold text-blue-900">SOLO</span>
+        </div>
+
+        <div class="area-card fade-in flex items-center gap-4 bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-lg hover-gold transition cursor-pointer flex-1">
+          <div class="text-blue-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12.414a2 2 0 10-2.828 2.828l4.243 4.243a8 8 0 1111.314-11.314 8 8 0 01-11.314 11.314z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span class="text-lg font-semibold text-blue-900">WONOSOBO</span>
+        </div>
+
+        <div class="area-card fade-in flex items-center gap-4 bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-lg hover-gold transition cursor-pointer flex-1">
+          <div class="text-blue-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12.414a2 2 0 10-2.828 2.828l4.243 4.243a8 8 0 1111.314-11.314 8 8 0 01-11.314 11.314z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span class="text-lg font-semibold text-blue-900">CILACAP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni Section -->
+  <section id="testimoni" class="container mx-auto px-6 md:px-12 py-16">
+    <h2 class="text-3xl md:text-4xl font-semibold text-blue-900 accent-gold text-center mb-12 fade-in">Apa Kata Mereka</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-lg hover-gold transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 bg-blue-200 rounded-full flex items-center justify-center accent-gold font-bold text-lg">SW</div>
+          <div>
+            <p class="font-semibold text-blue-900">Sari Wulandari</p>
+            <p class="text-sm text-gray-500">Solo</p>
+          </div>
+        </div>
+        <p class="text-gray-700 italic">"Proses pembuatan paspor baru sangat cepat dan mudah. Pelayanan ramah dan profesional."</p>
+      </div>
+
+      <div class="fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-lg hover-gold transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 bg-blue-200 rounded-full flex items-center justify-center accent-gold font-bold text-lg">BS</div>
+          <div>
+            <p class="font-semibold text-blue-900">Budi Santoso</p>
+            <p class="text-sm text-gray-500">Wonosobo</p>
+          </div>
+        </div>
+        <p class="text-gray-700 italic">"Sangat membantu saat paspor saya hilang. Proses klaim dan penggantian cepat dan transparan."</p>
+      </div>
+
+      <div class="fade-in bg-white card-border-gold rounded-xl p-6 shadow-md hover:shadow-lg hover-gold transition">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 bg-blue-200 rounded-full flex items-center justify-center accent-gold font-bold text-lg">AN</div>
+          <div>
+            <p class="font-semibold text-blue-900">Ani Nurjanah</p>
+            <p class="text-sm text-gray-500">Cilacap</p>
+          </div>
+        </div>
+        <p class="text-gray-700 italic">"Pelbagai jenis paspor seperti untuk umroh sangat bagus. Terpercaya dan mudah diakses."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="kontak" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="container mx-auto px-6 md:px-12 text-center fade-in">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">Butuh Bantuan Paspor? Hubungi saya Sekarang!</h2>
+      <p class="text-lg mb-8">saya siap membantu Anda dengan layanan yang cepat dan terpercaya.</p>
+      <a
+        href="https://wa.me/6281327465354"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center px-10 py-4 bg-green-500 hover:bg-green-600 transition rounded-full font-semibold text-white text-xl shadow-lg"
+      >
+        WhatsApp Saya
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.52 3.48a11.94 11.94 0 00-17 0 11.94 11.94 0 000 17l-1.5 5.5 5.5-1.5a11.94 11.94 0 0017-17zm-8.52 14.52a7.5 7.5 0 01-4.5-1.5l-.3-.2-2.7.75.75-2.7-.2-.3a7.5 7.5 0 0111.7-9.3 7.5 7.5 0 01-4.95 12.95z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="font-semibold text-lg accent-gold">Biro Jasa Paspor</h3>
+          <p class="text-sm">Layanan paspor yang cepat, mudah, dan terpercaya.</p>
+        </div>
+        <div class="text-center md:text-right">
+          <p class="text-sm">Kontak:</p>
+          <p class="text-sm"><a href="https://wa.me/6281327465354" class="hover:text-blue-400 transition">  n</a></p>
+          <p class="text-sm">   </p>
+          <p class="text-sm">   </p>
+        </div>
+      </div>
+      <div class="text-center mt-6 text-sm">
+        <p>web created by rasya</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with 'fade-in' class
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
+</content>
+</create_file>
