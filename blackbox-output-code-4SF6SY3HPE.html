@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Forever</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9, #ec407a);
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            color: pink;
+            animation: fall 10s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+        .floating-hearts {
+            pointer-events: none;
+        }
+        .container {
+            z-index: 1;
+            position: relative;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <!-- Floating Hearts Animation -->
+    <div class="floating-hearts" id="hearts"></div>
+
+    <div class="container text-center p-8 bg-white bg-opacity-80 rounded-xl shadow-lg max-w-lg mx-4">
+        <h1 class="text-4xl text-pink-600 font-bold mb-6 text-shadow">You Are My Forever</h1>
+        <div class="mb-6">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81d4d687-8134-45c7-ba84-f95b2d97e374.png" alt="Two intertwined hearts glowing with soft pink light against a background of rose petals falling gently, evoking deep romantic love and eternal connection with detailed shadows and highlights" class="rounded-lg mx-auto shadow-md" />
+        </div>
+        <p class="text-lg text-pink-700 mb-4">My dearest [Name], you light up my world like the soft glow of a pink sunset. Every moment with you is a treasure, a melody of love that plays in my heart forever. I love you more than words can describe – you are my everything.</p>
+        <div class="mb-6">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/050e2bfe-af18-4ef9-93c2-6176414bd3b1.png" alt="Stylized red heart in the center surrounded by pink roses and glittering lights, symbolizing pure passion and affection in a romantic artistic composition" class="rounded-full border-4 border-pink-300 shadow-lg" />
+        </div>
+        <p class="text-xl text-pink-600 font-semibold text-shadow">From the bottom of my heart, I love you endlessly!</p>
+        <button class="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full transition duration-300" onclick="showConfirmation()">Click Here for a Surprise!</button>
+    </div>
+
+    <script>
+        // Generate floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerText = '💖'; // Using text heart instead of emoji for compatibility
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 5 + 5 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(createHeart, 300);
+
+        // Surprise button functionality
+        function showConfirmation() {
+            alert('You are the love of my life! ❤️');
+        }
+
+        // Add more interactivity
+        document.addEventListener('click', function(e) {
+            const burst = document.createElement('div');
+            burst.style.position = 'absolute';
+            burst.style.left = e.pageX + 'px';
+            burst.style.top = e.pageY + 'px';
+            burst.style.fontSize = '2rem';
+            burst.style.color = 'pink';
+            burst.className = 'burst';
+            burst.innerText = '♥';
+            document.body.appendChild(burst);
+            setTimeout(() => burst.remove(), 1000);
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
